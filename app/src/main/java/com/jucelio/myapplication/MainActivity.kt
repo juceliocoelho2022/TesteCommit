@@ -19,21 +19,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    AlertDialog(
-                        onDismissRequest = { naoPermitirVoltarDialog = false},
-                        title = { Text("Atenção!") },
-                        text = { Text("Você não pode sair desta tela sem assinar o auto de infração ou recusar a assinatura.") },
-                        confirmButton = {
-                            TextButton(onClick = {
-                                naoPermiteVoltarDialog = false
-                            }) {
-                                Text("OK")
-                            } }
+
+            }
         }
+
     }
 }
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
